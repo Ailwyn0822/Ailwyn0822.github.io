@@ -1,0 +1,1457 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 63px 0;
+    background-color: black;
+}
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+.container {
+    display: flex;
+    width: 1264px;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+}
+#bar {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+#bar .container {
+    margin: 0;
+}
+#logo {
+    width: 300px;
+    height: 100px;
+    background-color: darkgoldenrod;
+    background-image: url("img/avengers/avengers-logo2.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+#logo:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+#banner {
+    width: 100%;
+    background-color: darkgray;
+    height: calc(100vh - 180px);
+    background-image: url("img/avengers/avengers.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+    margin-bottom: 15px;
+}
+
+#banner:hover #video #myVideo,
+#banner:hover #video {
+    opacity: 1;
+}
+
+#nav {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(12, 11, 11);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 98;
+
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgb(0, 0, 0);
+}
+
+.progress-bar {
+    height: 8px;
+    background: #ffffff;
+    width: 0%;
+}
+
+#nav .container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+#nav .container ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0 180px 0 0;
+    transition: 0.8s;
+    text-shadow: 0 2px 15px rgb(212, 0, 255, 0.5);
+    position: relative;
+}
+
+#nav .container ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: rgba(255, 255, 255);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+#nav .container ul li a:hover::after {
+    width: 100%;
+
+}
+
+
+
+#a1:hover~#a2 {
+    display: none;
+}
+
+
+
+#nav .container ul li:last-child a {
+    margin: 0;
+
+}
+
+
+#nav .container ul li a:hover {
+    border-radius: 20px;
+    background-size: 100%;
+    background-position: center;
+    font-size: 35px;
+}
+
+#nav .container ul li a:active {
+    color: firebrick;
+    font-size: 35px;
+}
+
+
+
+#main1 {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(0, 0, 0);
+    margin: 1px 0 1px 0;
+}
+.boxstyle{
+    width: calc(50% - 7.5px);
+    height: 100%;
+    float: left;
+    background-position: center;
+    background-size: cover;
+}
+#box1 {
+   
+    background-image: url("img/avengers/avengers1.jpg");
+    margin: 0 15px 0 0;
+  
+}
+#box2 {
+ 
+    background-image: url("img/avengers/avengers2.jpg");
+
+}
+#box1mask,
+#box2mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(39, 153, 230, 0);
+    transition: 1s;
+    padding: 100px;
+}
+
+#box1:hover #box1mask,
+#box2:hover #box2mask {
+    background-color: rgba(2, 2, 2, 0.5)
+}
+
+#box1:hover #box1mask #text1,
+#box2:hover #box2mask #text2 {
+    color: rgb(240, 203, 136, 1);
+}
+
+#text1,
+#text2 {
+    text-align: center;
+    line-height: 30px;
+    color: rgb(240, 203, 136, 0);
+    font-weight: 900;
+    transition: 1s;
+}
+
+
+#main2 {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: top;
+    transition: 1s;
+    margin: 0 0 1px 0;
+}
+
+#main2:hover {
+    background-position: bottom;
+}
+
+#box3 {
+    width: 350px;
+    height: 350px;
+    float: left;
+    background-image: url("img/avengers/leader.jpg");
+    background-size: cover;
+    background-position: left;
+    transition: 0.5s;
+}
+
+#box3:hover {
+    background-position: right;
+
+}
+
+#box4 {
+    width: 350px;
+    height: 350px;
+    float: left;
+    margin: 0 0 0 30px;
+    color: rgb(255, 255, 255);
+
+}
+
+#main2 .container {
+    justify-content: center;
+
+}
+
+#main3 {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    background-image: url("");
+    background-position: center;
+    background-size: cover;
+}
+
+#main3 .container {
+    background-position: top;
+    background-size: cover;
+}
+
+#people1:hover,
+#people2:hover,
+#people3:hover,
+#people4:hover,
+#people5:hover,
+#people6:hover,
+#people7:hover,
+#people8:hover,
+#people9:hover,
+#people10:hover,
+#people11:hover,
+#people12:hover {
+    opacity: 1;
+}
+
+.peoplebox {
+    width: 8.33%;
+    height: 100%;
+    float: left;
+    writing-mode: vertical-lr;
+    font-size: 50px;
+    color: rgb(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+#people1 {
+
+border-color: transparent transparent transparent #006ce0;
+    background-image: url("img/avengers/people1.jpg");
+}
+
+#people2 {
+    background-image: url("img/avengers/people2.jpg");
+
+}
+
+#people3 {
+    background-image: url("img/avengers/people3.jpg");
+
+}
+
+#people4 {
+    background-image: url("img/avengers/people4.jpg");
+
+}
+
+#people5 {
+    background-image: url("img/avengers/people5.jpg");
+
+}
+
+#people6 {
+    background-image: url("img/avengers/people6.jpg");
+}
+
+#people7 {
+    background-image: url("img/avengers/people7.jpg");
+
+}
+
+#people8 {
+    background-image: url("img/avengers/people8.jpg");
+
+}
+
+#people9 {
+    background-image: url("img/avengers/people9.jpg");
+
+}
+
+#people10 {
+    background-image: url("img/avengers/people10.jpg");
+
+}
+
+#people11 {
+    background-image: url("img/avengers/people11.jpg");
+
+}
+
+#people12 {
+    background-image: url("img/avengers/people12.jpg");
+
+}
+
+
+#main3 .container {
+    justify-content: center;
+}
+
+#text3 {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+}
+
+#h1 {
+    margin: 0;
+}
+
+#main4 {
+
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    margin: 15px 0 15px 0;
+}
+
+#main4 .container {
+    background-image: url("img/avengers/207377.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#main5 {
+
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+
+
+}
+
+#main5 .container {
+    background-size: cover;
+    background-position: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background-image: url("img/avengers/girl2.jpg");
+    padding: 0;
+
+
+
+}
+
+.rockbtnbox {
+    width: 70px;
+    height: 70px;
+    z-index: 97;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+#rock1btn {
+
+    background-image: url("img/avengers/EI.png");
+
+
+
+}
+
+.rockbox {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    transition: 1s;
+    position: absolute;
+    z-index: 96;
+    opacity: 0;
+}
+
+#rock1 {
+
+    background-image: url("img/avengers/witch.jpg");
+
+}
+
+#rock1btn:hover~#rock1,
+#rock2btn:hover~#rock2,
+#rock3btn:hover~#rock3,
+#rock4btn:hover~#rock4,
+#rock5btn:hover~#rock5,
+#rock6btn:hover~#rock6 {
+    opacity: 1;
+}
+
+#rock1btn:hover {
+    background-image: url("img/avengers/EI2.png");
+    width: 120px;
+    height: 120px;
+}
+
+#rock2btn {
+
+    background-image: url("img/avengers/mind.png");
+
+}
+
+#rock2 {
+
+    background-image: url("img/avengers/vision.jpg");
+
+
+}
+
+
+
+#rock2btn:hover {
+    background-image: url("img/avengers/mind2.png");
+    width: 120px;
+    height: 120px;
+}
+
+
+
+
+#rock3btn {
+
+    background-image: url("img/avengers/space.png");
+
+}
+
+#rock3 {
+
+    background-image: url("img/avengers/Captain-America-Avengers-Infinity-War_1600x900.jpg");
+
+
+}
+
+
+#rock3btn:hover {
+    background-image: url("img/avengers/space2.png");
+    width: 120px;
+    height: 120px;
+}
+
+#rock4btn {
+
+    background-image: url("img/avengers/power.png");
+
+}
+
+#rock4 {
+
+    background-image: url("img/avengers/Star-Lord-Avengers-Infinity-War_1600x900.jpg");
+
+
+}
+
+
+#rock4btn:hover {
+    background-image: url("img/avengers/power2.png");
+    width: 120px;
+    height: 120px;
+}
+
+#rock5btn {
+
+    background-image: url("img/avengers/soul.png");
+}
+
+#rock5 {
+
+
+    background-image: url("img/avengers/Spider-Man-Avengers-Infinity-War_1600x900.jpg");
+
+}
+
+
+#rock5btn:hover {
+    background-image: url("img/avengers/soul2.png");
+    width: 120px;
+    height: 120px;
+}
+
+#rock6btn {
+
+    background-image: url("img/avengers/time.png");
+
+
+}
+
+#rock6 {
+
+    background-image: url("img/avengers/Mantis-The-Avengers-Infinity-War_1600x900.jpg");
+
+}
+
+
+#rock6btn:hover {
+    background-image: url("img/avengers/time2.png");
+    width: 120px;
+    height: 120px;
+}
+
+
+#main6 {
+
+    width: 100%;
+    height: 600px;
+    background-color: rgb(0, 2, 3);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#main6 .container,
+#main7 .container,
+#main8 .container {
+    padding: 0;
+}
+
+
+#card1,
+#card2,
+#card3 {
+    width: 33%;
+    height: 95%;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900;
+    transition: 1s;
+}
+
+#card2 {
+    margin: 0 1%;
+
+}
+
+
+#card1:hover #cardphoto1,
+#card3:hover #cardphoto3,
+#card2:hover #cardphoto2 {
+
+    width: 0px;
+    height: 0px;
+}
+
+#card1:hover,
+#card2:hover,
+#card3:hover {
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-size: 60px;
+
+}
+
+#card1:hover {
+    background-image: url("img/avengers/dc.jpg");
+}
+
+#card2:hover {
+    background-image: url("img/avengers/thor.jpg");
+}
+
+#card3:hover {
+    background-image: url("img/avengers/black.jpg");
+}
+
+#cardphoto1,
+#cardphoto2,
+#cardphoto3 {
+    width: 100%;
+    height: 90%;
+    background-image: url("img/avengers/house.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#cardphoto1 {
+
+    background-image: url("img/avengers/house.jpeg");
+
+}
+
+#cardphoto2 {
+
+    background-image: url("img/avengers/house2.jpg");
+
+}
+
+#cardphoto3 {
+
+    background-image: url("img/avengers/house3.jpg");
+
+}
+
+.pp {
+    line-height: 20px;
+    text-align: center;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(2, 2, 2);
+    color: rgba(5, 5, 5, 0);
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+    background-image: url("img/avengers/logo-marvel2.jpg");
+    background-size: contain;
+    background-position: center;
+    transition: 0.5s;
+}
+
+#footer:hover {
+    background-image: url("");
+    color: rgb(255, 255, 255);
+
+}
+
+
+#main7 {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 2, 3);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#main7 .container {
+    background-color: rgb(0, 0, 0);
+}
+
+#demo,
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    margin: 0 0 30px 0;
+}
+
+#video,
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transition: 1s;
+}
+
+#main8 {
+    width: 100%;
+    background-color: rgb(0, 5, 7);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    vertical-align: middle;
+    width: 100%;
+    transition: 0.5s;
+
+}
+
+#main8 .container .row .column:first-child {
+    padding: 0 4px 0 0;
+
+}
+
+#main8 .container .row .column:last-child {
+    padding: 0 0 0 4px;
+
+}
+
+.imgg {
+    background-position: center;
+    background-size: cover;
+    margin-top: 8px;
+
+}
+
+#i1 {
+    background-image: url("img/avengers/re1.png");
+
+}
+
+#i1:hover img {
+    opacity: 0;
+    transform: rotateX(150deg);
+}
+
+#i2 {
+    background-image: url("img/avengers/re2.jpg");
+}
+
+#i2:hover img {
+    opacity: 0;
+    transform: rotateY(150deg);
+
+}
+
+#i3 {
+    background-image: url("img/avengers/re3.jpg");
+}
+
+#i3:hover img {
+    opacity: 0;
+    transform: rotateZ(150deg);
+
+}
+
+#i4 {
+    background-image: url("img/avengers/rest1.jpg");
+}
+
+#i4:hover img {
+    opacity: 0;
+    transform: translate(-100%, -100%);
+}
+
+#i5 {
+    background-image: url("img/avengers/rest2.jpg");
+}
+
+#i5:hover img {
+    transform: scale(0);
+    opacity: 0;
+}
+
+#i6 {
+    background-image: url("img/avengers/re4.jpg");
+}
+
+#i6:hover img {
+    opacity: 0;
+    transform: translate(100%, 100%);
+
+}
+
+#i7 {
+    background-image: url("img/avengers/re5.jpg");
+}
+
+#i7:hover img {
+    opacity: 0;
+    transform: translate(100%, -100%);
+
+}
+
+#i8 {
+    background-image: url("img/avengers/re6.jpg");
+}
+
+#i8:hover img {
+    opacity: 0;
+    transform: translate(-100%, 100%);
+
+}
+
+#i9 {
+    background-image: url("img/avengers/re7.jpg");
+}
+
+#i9:hover img {
+    opacity: 0;
+    transform: translate(100%);
+}
+
+#i10 {
+    background-image: url("img/avengers/re8.jpg");
+}
+
+#i10:hover img {
+    opacity: 0;
+    transform: translate(-100%);
+
+}
+
+#i11 {
+    background-image: url("img/avengers/rest3.jpg");
+}
+
+#i11:hover img {
+    opacity: 0;
+    transform: scale(1.5);
+
+}
+
+#i12 {
+    background-image: url("img/avengers/re9.jpg");
+}
+
+#i12:hover img {
+    opacity: 0;
+}
+
+#i13 {
+    background-image: url("img/avengers/re10.jpg");
+}
+
+#i13:hover img {
+    opacity: 0;
+}
+
+#i14 {
+    background-image: url("img/avengers/witch2.jpg");
+}
+
+#i14:hover img {
+    opacity: 0;
+}
+
+#i15 {
+    background-image: url("img/avengers/re11.jpg");
+    filter: grayscale(100%);
+    transition: 3s;
+
+}
+
+#i15:hover img {
+    opacity: 0;
+}
+
+#i15:hover {
+    filter: grayscale(1%);
+
+}
+
+#i16 {
+    background-image: url("img/avengers/re12.jpg");
+}
+
+#i16:hover img {
+    opacity: 0;
+    border-radius: 100%;
+}
+
+#main3 .container {
+    padding: 0;
+}
+
+.modal1-content,
+#caption,
+.modal2-content,
+.modal3-content,
+.modal4-content,
+.modal5-content,
+.modal6-content,
+.modal7-content,
+.modal8-content,
+.modal9-content,
+.modal10-content,
+.modal11-content,
+.modal12-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+
+
+
+.modal,
+.modal2,
+.modal3,
+.modal4,
+.modal5,
+.modal6,
+.modal7,
+.modal8,
+.modal9,
+.modal10,
+.modal11,
+.modal12 {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: 1s;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+#myBtn,
+#myBtn2,
+#myBtn3,
+#myBtn4,
+#myBtn5,
+#myBtn6,
+#myBtn7,
+#myBtn8,
+#myBtn9,
+#myBtn10,
+#myBtn11,
+#myBtn12 {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.modal-content,
+.modal2-content,
+.modal3-content,
+.modal4-content,
+.modal5-content,
+.modal6-content,
+.modal7-content,
+.modal8-content,
+.modal9-content,
+.modal10-content,
+.modal11-content,
+.modal12-content {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    font-size: 50px;
+    color: wheat;
+    position: relative;
+    transition: 1s;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.modal-content {
+
+    background-image: url("img/avengers/ba3.jpg");
+
+}
+
+.modal2-content {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/avengers/ba2.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    color: wheat;
+    font-size: 50px;
+
+}
+
+.close,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6,
+.close7,
+.close8,
+.close9,
+.close10,
+.close11,
+.close12 {
+    color: #ffffff;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus,
+.close2:hover,
+.close2:focus,
+.close3:hover,
+.close3:focus,
+.close4:hover,
+.close4:focus,
+.close5:hover,
+.close5:focus,
+.close6:hover,
+.close6:focus,
+.close7:hover,
+.close7:focus,
+.close8:hover,
+.close8:focus,
+.close9:hover,
+.close9:focus,
+.close10:hover,
+.close10:focus,
+.close11:hover,
+.close11:focus,
+.close12:hover,
+.close12:focus {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close2:hover,
+.close2:focus {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.modal3-content {
+
+    background-image: url("img/avengers/ba1.jpg");
+
+}
+
+
+
+.modal4-content {
+    background-image: url("img/avengers/ba10.jpg");
+}
+
+.modal5-content {
+
+    background-image: url("img/avengers/ba8.jpg");
+
+}
+.modal6-content {
+
+    background-image: url("img/avengers/ba7.jpg");
+
+}
+.modal7-content {
+
+    background-image: url("img/avengers/ba11.jpg");
+
+}
+
+.modal8-content {
+    background-image: url("img/avengers/ba6.jpg");
+
+}
+
+
+.modal9-content {
+
+    background-image: url("img/avengers/ba5.jpg");
+
+}
+
+
+
+.modal10-content {
+
+    background-image: url("img/avengers/ba4.jpg");
+
+}
+
+.modal11-content {
+
+    background-image: url("img/avengers/ba9.jpg");
+
+}
+
+
+.modal12-content {
+
+    background-image: url("img/avengers/ba12.jpg");
+
+}
+
+
+#main2-5 {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: top;
+    transition: 1s;
+}
+
+
+@media(max-width: 1280px) {
+    .container {
+        width: 960px;
+    }
+
+    #nav .container ul li a {
+        margin: 0 120px 0 0;
+    }
+}
+
+@media(max-width: 976px) {
+    .container {
+        width: 560px;
+    }
+
+    #nav .container ul li a {
+        margin: 0 10px 0 0;
+        font-size: 27px;
+    }
+
+    #text1 {
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    #text2 {
+        line-height: 20px;
+        font-size: 14px;
+
+    }
+
+    #box1mask {
+        padding: 50px;
+    }
+
+    #box2mask {
+        padding: 50px;
+    }
+
+    #nav .container ul li a:hover {
+        font-size: 20px;
+    }
+
+    .pp {
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width: 590px) {
+    .container {
+        width: 545px;
+    }
+
+    #nav .container ul li a {
+        margin: 0 10px 0 0;
+    }
+}
+
+@media(max-width: 576px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #nav .container ul li a {
+        margin: 0 35px 0 0;
+        font-size: 20px;
+    }
+
+    #box1 {
+        float: none;
+        width: 100%;
+        height: 50%;
+    }
+
+    #main1 {
+        height: 1200px;
+    }
+
+    #main2 .container {
+        padding: 0;
+    }
+
+    #box2 {
+        float: none;
+        width: 100%;
+        height: 50%;
+    }
+
+    #box4 {
+        width: 100%;
+        margin: 0;
+        height: 50%;
+        float: none;
+        clear: both;
+    }
+
+    #box3 {
+        float: none;
+        width: 100%;
+        height: 50%;
+    }
+
+    #main2 .container {
+        display: block;
+        margin: auto;
+    }
+
+    #box3:hover {
+        background-image: url("img/avengers/leader2.jpg");
+    }
+
+    #box4 {
+        transition: 1s;
+    }
+
+    #box4:hover {
+        color: rgb(255, 238, 0);
+    }
+
+    #h1t {
+        text-align: center;
+    }
+
+    html {
+
+        overflow-x: hidden;
+    }
+
+    #card1:hover {
+        background-position: 70%;
+    }
+
+    #main5 .container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    h2 {
+        font-size: 10px;
+    }
+
+    #main6 .container {
+        display: block;
+    }
+
+    #card1 {
+        width: 100%;
+        height: 33%;
+
+    }
+
+    #cardphoto1 {
+        height: 100%;
+    }
+
+    #card2 {
+        width: 100%;
+        height: 33%;
+      
+
+    }
+
+    #cardphoto2 {
+        height: 100%;
+    }
+
+    #card3 {
+        width: 100%;
+        height: 33%;
+
+    }
+
+    #cardphoto3 {
+        height: 100%;
+    }
+
+    .pp {
+        display: none;
+        opacity: 0;
+    }
+    #card1:hover{
+        background-position: top;
+    }
+    #card2:hover{
+        background-position: top;
+    }
+    #card3:hover{
+        background-position: top;
+    }
+    #card1:hover .pp {
+        display: block;
+        opacity: 1;
+    }
+
+    #card2:hover .pp {
+        opacity: 1;
+        display: block;
+
+    }
+
+    #card3:hover .pp {
+        opacity: 1;
+        display: block;
+
+    }
+
+    #main6 {
+        margin-top: 15px;
+        padding: 0 0 20px 0;
+
+    }
+
+    #main7 {
+        margin-top: 15px;
+    }
+
+    #card2 {
+        margin: 15px 0;
+    }
+
+    #card3 {
+        margin: 0 0 15px 0;
+    }
+
+    #main1 {
+        margin-bottom: 30px;
+    }
+
+    #box1 {
+        margin-bottom: 15px;
+    }
+    .peoplebox {
+        width: 25%;
+        height: 33.33%;
+        float: left;
+        writing-mode: vertical-lr;
+        font-size: 50px;
+        color: rgb(255, 255, 255, 1);
+        display: flex;
+        opacity: 0.5;
+        transition: 1s;
+        background-position: 90% 20%;
+        background-repeat: no-repeat;
+        
+
+    }
+    #people1{
+        background-position: 90% 40%;
+
+    }
+    #people5,#people6,#people7,#people8{
+        margin: 5px 0;
+    }
+    #main3 .container{
+        flex-wrap: wrap;
+    }
+    #banner{
+        background-image: url("img/avengers/avengers22.jpg");
+
+    }
+    #box1{
+        background-image: url("/img/avengers/movie6.jpg");
+    }
+    #box2{
+        background-image: url("/img/avengers/movie11.jpg");
+    }
+}
