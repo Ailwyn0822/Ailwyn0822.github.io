@@ -1,0 +1,556 @@
+// loading
+.loading-wrap {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: $shiro;
+    z-index: 1000;
+    position: fixed;
+}
+//行高
+* p{
+    line-height: 1.4;
+}
+* .swiper_photo{
+    @include backdrop(top center,no-repeat,contain);
+    height: 300px;
+    max-height: 300px;
+}
+* .banner_photo{
+    @include backdrop(center,no-repeat,cover);
+    height:70vh;
+}
+* .banner_photo_phone{
+    @include backdrop(center,no-repeat,cover);
+    height:215px;
+}
+//放大鏡
+*.zoomImg{
+    pointer-events: none;
+}
+//置頂
+.fa-arrow-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 39px;
+    z-index: 99;
+    color:$minor-iro;
+    transition: 0.3s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+// 搜尋API不斷行
+.gsc-selected-option {
+    word-break: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    @include backdrop(center, repeat, unset);
+    background-image: url('../images/bg/bg2.png');
+}
+
+.search_computer, .del_a{
+    cursor: default;
+}
+// 麵包屑調整
+.breadcrumb {
+    border-radius: 0;
+    padding: .75rem 0;
+    margin-bottom: 0;
+    background: none;
+    border-bottom: 2px solid $minor-iro;
+    .breadcrumb-item {
+        font-size: 80%;
+        a{
+            color: $minor-iro;
+        }
+    }
+}
+
+//首頁
+.web-detail {
+    min-height: 100vh;
+    margin-top:$desktop-interval;
+    @media(max-width: $max-header){
+        margin-top:$mobile-interval !important;
+    }
+    .banner{
+        transform: unset !important;
+    }
+    .item-image{
+        position: relative;
+        padding-bottom: 77.77%;
+        &.large {
+            padding-bottom: 133.77%;
+        }
+        img{
+            top:50%;
+            left:50%;
+            max-width: 100%;
+            max-height: 100%;
+            position:absolute;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+
+        }
+    }
+    .swiper-slide{
+        img{
+            transition: 0.5s;
+        }
+        .swiper_photo{
+            transition: 0.5s;
+        }
+            
+        &:hover{
+            img{
+                transform: scale(1.05) translate(-50%, -50%);
+            }
+            .swiper_photo{
+                transform: scale(1.05);
+            }
+        }
+        .FeaturedWorks{
+            @include backdrop(center,no-repeat,contain);
+            height: 600px;
+            max-height: 600px;
+        }
+    }
+    .swiper-pagination-bullet-active{
+        background-color: $main-iro !important;
+    }
+    .swiper-button-next{
+        color: $minor-iro;
+    }
+    .swiper-button-prev{
+        color: $minor-iro;
+    }
+    .container.index{
+        overflow: hidden;
+        .more{
+            color:$kuro;
+            transition: 0.3s;
+            margin-top: 15px;
+            display: inline-block;
+            &:hover{
+                color: $minor-iro;
+            }
+        }
+        >.row:nth-child(1){
+           .col-12:nth-child(1){
+                p{
+                    font-size: 30px;
+                }
+            }
+            #temple_name{
+                font-size: 16px;
+                font-weight: 900;
+            }
+        }
+        .row:nth-child(4){
+            // background-color: rgba($color: red, $alpha: 0.1);
+            #message_icon{
+                display: flex;
+                justify-content: center;
+            }
+            .footer_btn {
+                h4 {
+                    font-size: 24px;
+                    font-weight: 900;
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .container-fluid.index{
+        .creation .col-12 {
+            position: relative;
+            .home-creation-title {
+                top: 0;
+                left: 0;                
+                position: absolute;
+            }
+            div {
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+                a{
+                    color:$kuro;
+                    transition: 0.5s;
+                    &:hover{
+                        color:$minor-iro;
+                    }
+                }
+            }
+            @media (max-width:$max-header){
+                div {
+                    top:50%;
+                    left: 30%;
+                    p {
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+    }
+    .container-fluid {
+        padding: 0;
+    }
+    // 最新消息
+    .news-wrap {
+        .more{
+            color:$kuro;
+            transition: 0.3s;
+            text-align: right;
+            margin-top: 15px;
+            display: inline-block;
+            &:hover{
+                color: $minor-iro;
+            }
+        }
+        .row > .col  {
+            ul {
+                display: flex;
+                justify-content: space-around;
+            } 
+        }      
+        .news-other {
+            justify-content: space-between;
+            > * {
+                width: 100%;
+            }
+            .news-other-images {
+                flex: 0 0 300px;
+                max-width: 300px;
+            }
+            .news-other-detail {
+                flex: 0 0 calc(100% - 315px);
+                max-width: calc(100% - 315px);
+                > *:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+            @media (max-width: 767px) {
+                > * {
+                    flex: 0 0 100% !important;
+                    max-width: 100% !important;
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+        .page-item{
+            a{
+                color: $minor-iro;
+            }
+        } 
+        .news_video_swiper{
+            margin-top: 0;
+        }
+    }
+    // 關於
+    .about-wrap {
+        > *:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+        .about-list {
+            > p, h6 {
+                line-height: 1.4;
+            }
+            > *:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    //聯絡我們
+    .contact_container {
+        @media (max-width:768px){
+            button{
+                width:100%;
+            }
+        }
+        .form-info{
+            line-height: 30px;
+        }
+    }
+    // 產品內頁
+    .proitem-wrap {
+        .detail-sort footer {
+            font-size: 100%;
+        }
+        .carousel-item {
+            .lightcase-item {
+                display: block;
+                overflow: hidden;
+                position: relative;
+                padding-bottom: 77.77%;
+                img {
+                    top: 50%;
+                    left: 50%;
+                    max-width: 100%;
+                    max-height: 100%;
+                    position: absolute;
+                    transform-origin: left;
+                    transform: translate(-50%, -50%);
+                    transition: transform .4s ease-in-out;
+                }
+            
+            }
+        }
+        // 相簿縮圖樣式
+        .thumbnail-wrap {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid $minor-iro;
+            .thumbnail-list {
+                width: 50px;
+                cursor: pointer;
+                margin-bottom: .1rem;
+                display: inline-block;
+                border: 1px solid $kuro;
+                transition: border .2s linear;
+                .thumbnail {
+                    position: relative;
+                    padding-bottom: 75%;
+                    img {
+                        top: 50%;
+                        left: 50%;
+                        display: block;
+                        max-width: 100%;
+                        max-height: 100%;
+                        position: absolute;
+                        transform: translate(-50%, -50%)
+                    }            
+                }
+                &:hover, &.active {
+                    border-color: $minor-iro;
+                }
+            }
+        }    
+        .proitem-detail {
+            padding: 2rem;
+            @media (max-width: 767px) {
+                padding: 1rem;
+            }
+            .proitem-sort {
+                &:not(:last-child), > *:not(:last-child) {
+                    padding-bottom: .75rem;
+                }
+                > h2 ~ p {
+                    font-size: 90%;
+                    margin-top: -5px;
+                    font-weight: bold;
+                }
+                &.price {
+                    padding-top: 1rem;
+                    margin-top: .5rem;
+                    border-top: 1px solid $gurei;
+                }
+                .sort-title {
+                    font-size: 95%;
+                    overflow: hidden;
+                    font-style: italic;
+                    text-align: center;
+                    $pseudo: (before: left, after: right);
+                    span {
+                        padding: 0 1rem;
+                        position: relative;
+                        color: $minor-iro;
+                        display: inline-block;
+                        @each $i, $item in $pseudo {
+                            &::#{$i} {
+                                content: '';
+                                top: 50%;
+                                left: auto;
+                                right: auto;
+                                width: 50vw;
+                                position: absolute;
+                                border-top: 1px solid $minor-iro;
+                                #{$item}: 100% !important;
+                            }
+                        }                    
+                    }
+                }            
+                .sort-item {
+                    font-size: 95%;
+                    > *:not(:last-child) {
+                        margin-bottom: .25rem;
+                    }
+                    > p {
+                        font-weight: bold;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: .5rem;
+                    }
+                    .sort-kind {
+                        > * {
+                            margin-right: .15rem;
+                            margin-bottom: .1rem;
+                        }                    
+                        .thumbnail-list {
+                            cursor: pointer;
+                            padding: 3px 8px;
+                            object-fit: cover;
+                            display: inline-block;
+                            border: 1px solid transparent;
+                            transition: all .3s ease-in-out;
+                            border-color: darken($shiro, 15%);
+                            &:hover, &.active {
+                                color: $shiro;
+                                background-color: $main-iro;
+                                border-color: darken($shiro, 15%);
+                            }
+                        }
+                    }                     
+                    .discount-content {
+                        padding: 1rem;
+                        li {
+                            font-size: 95%;
+                            &:not(:last-child) {
+                                margin-bottom: .75rem;
+                                border-bottom: 1px black solid;
+                            }
+                            p{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }            
+            }
+        }
+        .proitem-info {
+            margin-top: 3rem;
+            h4 {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid $minor-iro;
+            }
+            .info-list {
+                > *:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .proitem-recommend {
+            padding-top: 5rem;
+            h5 {
+                font-weight: bold;
+                position: relative;
+                margin-bottom: 2rem;     
+                padding-bottom: .5rem;
+                display: inline-block;
+                border-bottom: 3px solid $minor-iro;
+            }
+            .owl-nav {
+                text-align: right;
+                padding-top: 1.5rem;
+                border-top: 1px solid $gurei;
+            }
+        }
+    }
+    .proitem-btn {
+        margin-left: -10px;
+        margin-right: -10px;
+        > [class*="col"] {
+            padding-left: 10px;
+            padding-right: 10px;
+            svg {
+                top: 1px;
+                position: relative;
+            }
+        }    
+        @media (max-width: 575px) {
+            margin-left: -5px;
+            margin-right: -5px;
+            > [class*="col"] {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    }
+    .product-sort-wrap {
+        .detail-sort {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 1rem;
+        }
+        @media (max-width: 767px) {
+            .detail-content > .row > *:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .product-sort-list {
+            overflow: hidden;
+            a {
+                color: $kuro;
+                display: block;
+                overflow: hidden;
+                font-size: 1.4rem;
+                font-weight: bold;
+                position: relative;
+                padding: 6rem 3rem;
+                text-align: center;
+                position: relative;
+                border-radius: 10px;
+                background-color: $shiro;
+                border: 1px solid $gurei;
+                @include backdrop(center, no-repeat, contain);
+                span {
+                    position: relative;
+                    padding: .35rem .5rem;
+                    display: inline-block;
+                    transition: background-color .4s ease-in-out;
+                }
+                &::before {
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transition: width .4s ease-in-out;
+                    background-color: rgba($shiro, .7);
+                }	
+                &:hover {
+                    color: $shiro;
+                    span {
+                        background-color: rgba($main-iro, .8);
+                    }
+                    &::before {
+                        width: 0;
+                    }
+                }
+            }
+        }   
+    }
+    // 網站地圖
+    .map {
+        margin-top: 20px;
+        background-color: $minor-iro;
+        p{
+            padding: 10px 0;
+            font-weight: 900;
+            font-size: 16px;
+            color: wheat;
+        }
+        .map_type{
+            background-color: darken($main-iro, 50%);
+            p{
+                background-color: rgb(122, 63, 14);
+                padding: 0;
+                padding: 0 20px;
+            }
+        }
+    }
+}

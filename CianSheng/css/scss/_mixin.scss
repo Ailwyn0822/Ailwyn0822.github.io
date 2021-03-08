@@ -1,0 +1,44 @@
+// 圓角左右歸0
+@each $name in right, left {
+    .radius-#{$name}-0 {
+        border-top-#{$name}-radius: 0;
+        border-bottom-#{$name}-radius: 0;
+        border-#{$name}: 0;  
+    }  
+}
+
+// 背景
+@mixin backdrop($position, $repeat, $size)  {
+    $backdrop-array: (position: $position, repeat: $repeat, size: $size);
+    @each $name, $item in $backdrop-array {
+        background-#{$name}: #{$item};
+    }
+}
+
+// 標題設定
+$title: ( xl: 46pt, lg: 40pt, h1: 34pt, h2: 32pt, h3: 28pt, h4: 24pt, h5: 20pt, h6: 18pt );
+$width-array: ( '768px': min-width,  '767px': max-width,  '575px': max-width);
+@each $val, $width in $width-array {
+    @media ( $width: #{$val} ) {
+        @if ( $val == '767px' ){
+            $title: ( xl: 40pt, lg: 34pt, h1: 30pt, h2: 26pt, h3: 24pt, h4: 21pt, h5: 18pt, h6: 16pt );
+        } @else if ( $val == '575px' ) {
+            $title: ( xl: 32pt, lg: 28pt, h1: 26pt, h2: 22pt, h3: 20pt, h4: 18pt, h5: 16pt, h6: 14pt );
+        }
+        @each $i, $item in $title {
+            .font-#{$i} {
+                font-size: $item;
+            }  
+        }      
+    }
+}
+
+// 省略號
+@mixin part-omit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+%part-omit {
+    @include part-omit();
+}

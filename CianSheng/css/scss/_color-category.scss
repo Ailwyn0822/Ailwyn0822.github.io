@@ -1,0 +1,64 @@
+@each $color, $value in $color-array {
+    $general :  (map-get($value, 'set-general'));
+    $dark :     (map-get($value, 'set-dark'));
+    $light:     (map-get($value, 'set-light'));
+
+    .btn-#{$color} {
+        @include custom-button($general, $dark , $light);
+    }
+
+    .btn-outline-#{$color} {
+        @include custom-outline-button($general, $dark , $light);
+    }
+
+    .text-#{$color} {
+        color: $general;
+    }
+
+    a.text-#{$color}, button.text-#{$color} {
+        @include custom-link($general, $dark, $light);
+    }
+    
+    .bg-#{$color} {
+        background-color: $general;
+        color: color-decide($general);
+    }
+
+    .bg-gradual-#{$color} {
+        background-image: linear-gradient(to top, lighten($general, 30%) 0%, lighten($general, 5%) 100%);
+    }
+
+    // 滾動條顏色
+    .scroll-#{$color}::-webkit-scrollbar-thumb {
+        background-color: $light;
+        // border-radius: 5px;
+        &:hover {
+            background-color: $dark;
+        }
+    }
+
+    // 控制滾動條往上或往下的按鈕
+    .scroll-#{$color}::-webkit-scrollbar-button {
+        background-color: $dark;
+        display: none;
+    }
+
+    // 表單元素
+    .form-#{$color} {
+        border: 1px solid $general;
+        background-color: $general;
+        color: color-decide($general);
+        transition: color .4s ease-in-out, background-color .25s ease-in-out, border .25s ease-in-out;
+        &:focus {
+            outline: none;
+            box-shadow: none !important;
+            border-color: $dark;
+            background-color: $dark;
+            color: color-decide($dark);
+        }
+        // &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        //     -webkit-appearance: none; 
+        //     margin: 0; 
+        // }
+    }
+}

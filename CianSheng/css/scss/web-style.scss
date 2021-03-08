@@ -1,0 +1,39 @@
+// 變數優先載入
+@import 'variable';
+
+$color-array: () !default;
+$color-array: map-merge(
+    (
+        // 主色
+        'main':
+        (
+            'set-general': $main-iro,
+            'set-dark' : darken($main-iro, 15%),
+            'set-light': lighten($main-iro, 15%)
+        ),
+        "minor":   
+        (
+            'set-general': $minor-iro,
+            'set-dark' : darken($minor-iro, 15%),
+            'set-light': lighten($minor-iro, 15%)
+        ),
+        // "tertiary":   
+        // (
+        //     'set-general': $tertiary-iro,
+        //     'set-dark' : darken($tertiary-iro, 15%),
+        //     'set-light': lighten($tertiary-iro, 15%)
+        // ),
+    ),
+    $color-array
+);
+@import 'grid';
+@import 'mixin';
+@import 'reset';
+@import 'main';
+@import 'fixed';
+
+// color
+@import 'color-mixin';
+@import 'color-category';
+
+

@@ -1,0 +1,64 @@
+%grid-share {
+    width: 100%;
+    position: relative;    
+}
+@each $i in '', '-auto', '-sm', '-md', '-lg', '-xl' {
+    @if ( $i != '-auto'){
+        @for $num from 1 through 12 {
+            .grid#{$i}, .grid#{$i}-#{$num} {
+                @extend %grid-share;
+            }
+        }
+    } @else {
+        .grid#{$i} {
+            @extend %grid-share;
+        }            
+    }
+}
+
+// 網格容器
+.grid-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// 網格
+
+.grid {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;  
+}
+.grid-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+@for $num from 1 through 12 {
+    .grid-#{$num} {
+        flex: 0 0 percentage($num/12);
+        max-width: percentage($num/12);
+    }
+}
+
+$grid: ( sm: '576px', md: '768px', lg: '992px', xl: '1200px' );
+@each $i, $item in $grid {
+    @media (min-width: $item) {
+        .grid-#{$i} {
+            flex-grow: 1;
+            flex-basis: 0;
+            max-width: 100%;  
+        }
+        .grid-#{$i}-auto {
+            flex: 0 0 auto;
+            width: auto;
+            max-width: 100%;
+        }
+        @for $num from 1 through 12 {
+            .grid-#{$i}-#{$num} {
+                flex: 0 0 percentage($num/12);
+                max-width: percentage($num/12);
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+// 判斷顏色要白色或是黑色
+@function color-decide($color) {
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+    // $now: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+    $now: (($r * 299) + ($g * 587) + ($b * 114)) / 1150;
+
+    @if ($now >= $standard) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+$standard: 150 !default;
+
+// hover
+@mixin custom-state {
+    &:hover, &:active, &.active {
+        @content; 
+    }
+}
+
+// button
+@mixin custom-button($main, $dark, $light) {
+    border-color: $main;
+    background-color: $main;
+    color: color-decide($main);
+
+    &:not(:disabled):not(.disabled):active, 
+    &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle  {
+        background-color: $dark;
+        color: color-decide($dark);
+        &:focus {
+            box-shadow: 0 0 0 .2rem rgba($light, .5);
+        }
+    }
+
+    &:focus, &.focus {
+        box-shadow: 0 0 0 .2rem rgba($light, .5);
+    }
+
+    &.disabled, &:disabled {
+        box-shadow: none !important;
+        color: color-decide($main);
+    }
+
+    @include custom-state {
+        color: color-decide($main);
+        &:not(:disabled):not(.disabled) {
+            border-color: $dark;
+            background-color: $dark;
+        }
+    };
+}
+
+// button outline
+@mixin custom-outline-button($main, $dark, $light) {
+    color: $main;
+    border-color: $main;
+    &:not(:disabled):not(.disabled):active, 
+    &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle {
+        background-color: $dark;
+        color: color-decide($dark);
+        &:focus {
+            box-shadow: 0 0 0 .2rem rgba($light, .5);
+        }
+    }
+
+    &:focus, &.focus {
+        box-shadow: 0 0 0 .2rem rgba($light, .5);
+    }
+
+    &.disabled, &:disabled {
+        box-shadow: none !important;
+        color: $main;
+    }
+
+    @include custom-state {
+        &:not(:disabled):not(.disabled) {
+            background-color: $main;
+            color: color-decide($main);
+        }
+    };
+}
+
+// link
+@mixin custom-link($main, $dark, $light) {
+    color: $main;
+    @include custom-state {
+        color: $dark;
+    }
+    &:focus {
+        color: $dark;
+    }
+    &.disabled {
+        cursor: default;
+        color: $light;
+    }
+}
+
+// table 
+@mixin custom-table($main, $dark, $light) {
+    color: color-decide($main);
+    &, > th, > td {
+        background-color: $main;
+    }
+    th, td, thead th, tbody + tbody {
+        border-color: $light;
+    }
+}

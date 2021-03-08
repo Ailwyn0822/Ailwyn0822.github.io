@@ -1,0 +1,33 @@
+// 主要顏色
+$main-iro: #f1e9e1;
+$minor-iro: #a1581d;
+// $tertiary-iro: #fff5ee;
+
+// $main-iro1: darken($main-iro, 20%);
+// $main-iro2: lighten($main-iro, 5%);
+
+// 灰 黑 白
+$gurei: #dee2e6;
+$kuro: #000000;
+$shiro: #ffffff;
+
+// 社群相關
+$fb: #4267b2;
+$ig: #d62976;
+$line: #00b900;
+$twitter: #1da1f2;
+$youtube: #cc0000;
+
+// 需扣掉 header 的高度 (電腦及手機版)
+// $desktop-interval: 237px;
+// $mobile-interval: 75px;
+
+$desktop-interval: 162px;
+$mobile-interval: 55px;
+
+// 針對header變為手機版的基準寬度
+// $max-header: 767px;
+// $min-header: 768px;
+
+$max-header: 991px;
+$min-header: 992px;

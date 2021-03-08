@@ -1,0 +1,173 @@
+// 預設滾動條顏色
+::-webkit-scrollbar-thumb {
+    background-color: lighten($kuro, 25%);
+    // border-radius: 5px;
+    &:hover {
+        background-color: lighten($kuro, 5%);
+    }
+}
+
+// 滾動條背景顏色 (最底層)
+::-webkit-scrollbar-track {
+    background-color: $shiro;
+}
+
+// 滾動區域背景顏色
+::-webkit-scrollbar-track-piece {
+    background-color: darken($shiro, 15%);
+    border-radius: 5px;
+    &:hover {
+        background-color: darken($shiro, 10%);;
+    }
+}
+
+//---------------------------------------------------------------------------------------------
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    /* vertical-align: baseline; */ 
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block; 
+}
+
+body {
+    line-height: 1; 
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none; 
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none; 
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+
+* {
+    // word-break: break-all; // 只要超過寬度強制斷行
+    // word-break: break-word; // 會根據單字斷行 但如果寬度不夠會自動換行 一般都用這 IE不支援 如果字串太長 會超出範圍(等同預設值)
+    font-family: Arial, '微軟正黑體' !important;
+    // font-family: 'Noto Sans TC', sans-serif !important;
+}
+
+a, a:hover, a:active, a:focus, a:visited {
+    text-decoration: none !important;
+}
+
+// 需注意是否有與其他class或bootstrap衝突
+a {
+    transition: background .25s ease-in-out, color .25s ease-in-out;
+}
+
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+// IE燈箱問題
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .modal-title {
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+    }
+    .modal-body {
+        height: 100%;
+    }    
+}
+
+// 按鈕樣式
+span.btn.disabled {
+    opacity: 1;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer; 
+}
+
+// 表格基本格式
+table {
+    width: 100% !important;
+}
+.table-hover tbody tr {
+    transition: background .25s ease-in-out;
+}
+.table-item {
+    &::-webkit-scrollbar {
+        height: 5px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+    &:not(.no-overhide) {
+        width: 100%;
+        overflow-x: auto;
+        td, p {
+            max-width: 300px;
+            @extend %part-omit;
+            @media (max-width: 575px){
+                max-width: 150px;
+            }              
+        }
+        th, td {
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+    }
+    .table {
+        thead th {
+            border-bottom: 1px solid transparent;
+        }
+        tbody tr:not(:last-child) {
+            border-bottom: 1px solid transparent;
+        }
+        .table-picture {
+            width: 40px;
+            height: 40px;
+            @include backdrop(center, no-repeat, contain);
+        }
+    }
+}
+
+// b4勾選框調整
+.custom-control-label::before, .custom-control-label::after {
+    top: 0;
+}
+
+// google搜尋API不斷行
+// .gsc-selected-option {
+//     word-break: normal;
+// }
