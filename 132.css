@@ -1,0 +1,159 @@
+.backBtn {
+    width: 95px;
+    height: 58px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    background: white;
+    border: none;
+  }
+  .backBtn p {
+    color: #c77c7c;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 58px;
+    margin: 0;
+  }
+  .payTitle {
+    font-size: 50px;
+    color: #7e7e7e;
+    margin-bottom: 38px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .patLittleTitle {
+    color: #7e7e7e;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 61px;
+  }
+  .payPrice {
+    width: 316px;
+    height: 52px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    text-align: center;
+    color: #989595;
+  }
+  .payCard {
+    width: 316px;
+    height: 52px;
+    border: 1px solid #ced4da;
+    text-align: center;
+  }
+  .payPrice.active {
+    background-color: unset;
+    border: 1px solid unset;
+  }
+  .payPriceOutside,
+  .payCardOutside {
+    position: relative;
+  }
+  .payPriceOutside::after {
+    content: "現金付款";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-size: 16px;
+    color: #c77c7c;
+    font-weight: 500;
+  }
+  .payCardOutside::after {
+    content: "信用卡付款";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-size: 16px;
+    color: #c77c7c;
+    font-weight: 500;
+  }
+  .ckeckPrice {
+    width: 316px;
+    height: 52px;
+    background: #e48787;
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 5px rgba(228, 135, 135, 0.5);
+    font-size: 20px;
+  }
+  .paySelect,
+  .smallText {
+    width: 700px;
+    max-width: 700px;
+  }
+  .paySelect .d-flex p {
+    color: #828282;
+  }
+  .cash {
+    margin-top: 10vh;
+  }
+  .smallText p {
+    color: #c77c7c;
+  }
+  .toolBtnGroup {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .toolBtn {
+    width: 150.88px;
+    height: 58px;
+    background: #ffe6b6;
+    box-shadow: 4px 4px 10px rgba(255, 221, 155, 0.5);
+    border: none;
+    color: #989595;
+  }
+  .uniformTitle,
+  .vehicleTitle,
+  .cardTitle {
+    border-bottom: 2px solid #af7a80;
+    width: 366px;
+    text-align: center;
+    border-radius: 1px;
+    color: #989595;
+    font-weight: 400;
+  }
+  .uniformText,
+  .vehicleText {
+    font-size: 20px;
+    color: #c77c7c;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .uniformInput,
+  .vehicleInput {
+    width: 181px;
+    height: 37px !important;
+    border: 1.5px solid #b1b1b1;
+    border-radius: 3px;
+  }
+  .uniformEnter,
+  .vehicleEnter {
+    width: 76px;
+    height: 29px;
+    background: #c77c7c;
+    box-shadow: 4px 4px 10px rgba(174, 98, 98, 0.25);
+    border-radius: 3px;
+    color: white;
+    border: none;
+  }
+  .barcodeBox {
+    position: relative;
+  }
+  .barcode {
+    position: absolute;
+    top: 0;
+    right: -70px;
+  }
+  .cardBtn {
+    width: 168px;
+    height: 51px;
+    background: #dfdfdf;
+    color: #989595;
+    border: 1px solid #dfdfdf;
+  }
+  .cardBtn:not(:last-child) {
+    margin-right: 40px;
+  }
